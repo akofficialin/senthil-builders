@@ -1,0 +1,260 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ebee4c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.contact-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f04747;
+  padding: 50px 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.hero-image img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+ 
+  margin-top: 9%;
+}
+
+.image-container img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 9%;
+}
+.fa-whatsapp{
+  align-items: center;
+  width: 10x;
+  justify-self: unset;
+  margin-right: 50px;
+}
+.fa-instagram{
+  align-items: center;
+  width: 10x;
+  justify-self: unset;
+  margin-right: 50px;
+}
+.fa-phone{
+  align-items: center;
+  justify-self: unset;
+  width: 10x;
+  margin-right: 50px;
+  color-scheme: rgb(231, 62, 90);
+  
+}
+
+
+footer {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.contact-icons img {
+  width: 30px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  margin-top: 10px;
+}
+
+#contact-form input, #contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-img {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 530px) {
+  body {
+      transform: scale(0.55);
+      margin-top: -30px;
+      padding: auto;
+      align-items: center;
+    
+  }
+
+  .hero-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-content h1 {
+      font-size: 4em;
+  }
+
+  .hero-content p {
+      font-size: 2em;
+  }
+
+  .hero-image img {
+      margin-top: 20px;
+  }
+}
+
+/*card */
+.project-card {
+  perspective: 1000px;
+  width: 100%;
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card-front, .project-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.project-card-back {
+  transform: rotateY(180deg);
+}
+/*revel*/
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
